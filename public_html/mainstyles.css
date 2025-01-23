@@ -1,0 +1,351 @@
+html {
+    background-color:#fffff2;
+    color: black;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: 'Tanker-Regular';
+  src: url('Tanker_Complete/Fonts/WEB/fonts/Tanker-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPNeueMachina';
+  src: url('PPNeueMachina/PPNeueMachina-Ultrabold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Ginto';
+  src: url('Ginto/ABCGintoNord-Medium-Trial-BF651b7b7839fc0.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Ginto-Light';
+  src: url('Ginto/ABCGintoNord-Light-Trial-BF651b7b774e227.otf') format('opentype');
+}
+
+header {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 20px;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+img {
+  width: 100%;
+}
+
+nav {
+    /* transition: all 300ms linear;
+    opacity: 0;
+    display: none; */
+    border-bottom: solid;
+    top: 0;
+    position: sticky;
+  }
+
+h1 {
+  font-family: 'Ginto';
+  font-size: 80px;
+  padding-top: 12%;
+  padding-bottom: 12%;
+}
+
+h2 {
+  font-size:   30px;
+  font-family: 'Ginto-Light';
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'Ginto-Light';
+  font-weight: 400;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: black;
+    /* -webkit-text-stroke: 0.5px; */
+}
+
+a:hover{
+  border-bottom: 2px dashed black;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+#photoGallery {
+  padding-top: 20px;
+  width: 750px;
+  height: 500px;
+}
+
+#containerTxt {
+  display: flex;
+  padding-right: 100px;
+  padding-left: 100px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
+#container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-top: 50px;
+    background-color: antiquewhite;
+    padding: 90px;
+    border-bottom: solid;
+    border-top: solid;
+}
+
+#container1 p {
+  padding: 10px 20px;
+}
+
+#container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 2.9rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 40px;
+  padding-bottom: 10%;
+}
+
+#webBreak {
+  display: flex;
+  padding-right: 100px;
+  padding-left: 100px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
+/* #lefttext { */
+  /* padding-right: 10%; */
+/* } */
+
+.wave {
+    background-image: url(mainphotos/websitephotos/wave1.png);
+    height: 100px;
+    overflow-x: hidden;
+    animation: wavy auto linear;
+    animation-timeline: scroll();
+}
+
+@keyframes wavy {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: 100%;
+  }
+}
+
+figure {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+/* figure img {
+  width: 100%;
+  aspect-ratio: 9/10;
+  object-fit: cover;
+  max-width: 500px;
+} */
+
+figcaption {
+  font-family: 'Ginto-Light';
+  display: flex;
+  justify-content: center;
+}
+
+/* #container2 figure img {
+  width: 100%;
+  display: block;
+} */
+
+/*
+figure {
+  display: flex;
+  flex-wrap: wrap;
+}
+*/
+/* img {
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  } */
+
+footer figure img {
+  width: 40px;
+  height: 40px;
+}
+
+footer {
+  border-top: solid black;
+  background-color: #DC7846;
+  color: black;
+  display: grid;
+  grid-template-columns: 9fr 0.5fr 0.5fr 0.5fr;
+  align-items: center;
+  padding: 3%;
+}
+
+footer p {
+  margin-left: 20px;
+}
+
+.material-symbols-outlined{
+  color: black;
+      display: none;
+      position: absolute;
+      right: 20px;
+      top: 43px;
+      font-size: 40px;
+}
+
+@media only screen and (max-width: 650px) and (orientation: portrait) {
+
+  material-symbols-outlined{
+    color: black;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 43px;
+        font-size: 40px;
+  }  
+  
+  h1 {
+    font-size: 90%;
+  } 
+  
+  nav ul {
+    font-size: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: lighter;
+    padding: 5px;
+    list-style-type: none;
+  }
+
+  nav ul, nav ul li {
+    margin: 5px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .material-symbols-outlined{
+    right: 20px;
+    top: 15px;
+  }
+
+  #container1 {
+    display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+  }
+
+  #containerTxt {
+    border: 5px;
+  }
+
+  #container2  {
+    display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    gap: 40px;
+  }
+
+  footer p {
+    font-size: 15px;
+  }
+
+  footer figure img {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+  }
+}
+
+/*
+
+1 style
+
+.italiana-regular {
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+12 styles
+
+.roboto-light {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+18 styles
+
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+variable
+
+// <weight>: Use a value from 100 to 900
+
+.big-shoulders-display-<uniquifier> {
+  font-family: "Big Shoulders Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
