@@ -8,7 +8,7 @@ body {
   padding: 0px;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Tanker-Regular';
   src: url('Tanker_Complete/Fonts/WEB/fonts/Tanker-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -19,16 +19,21 @@ body {
 @font-face {
   font-family: 'PPNeueMachina';
   src: url('PPNeueMachina/PPNeueMachina-Ultrabold.otf') format('opentype');
-}
+} */
 
 @font-face {
   font-family: 'Ginto';
-  src: url('Ginto/ABCGintoNord-Medium-Trial-BF651b7b7839fc0.otf') format('opentype');
+  src: url('fonts/Ginto/ABCGintoNord-Medium-Trial-BF651b7b7839fc0.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Ginto-Light';
-  src: url('Ginto/ABCGintoNord-Light-Trial-BF651b7b774e227.otf') format('opentype');
+  src: url('fonts/Ginto/ABCGintoNord-Light-Trial-BF651b7b774e227.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'roc-grotesk';
+  src: url('fonts/Demo_Fonts/Fontspring-DEMO-rocgrotesk-regular.otf') format('opentype');
 }
 
 header {
@@ -70,13 +75,13 @@ h1 {
 
 h2 {
   font-size:   30px;
-  font-family: 'Ginto-Light';
+  font-family: 'Ginto';
   font-weight: 400;
 }
 
 h3 {
   font-size: 30px;
-  font-family: 'Ginto-Light';
+  font-family: 'Ginto';
   font-weight: 400;
 }
 
@@ -103,8 +108,10 @@ header img {
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 400;
   font-size: 20px;
+  font-style: normal;
 }
 
 #photoGallery {
@@ -130,8 +137,6 @@ p {
     margin-top: 50px;
     background-color: antiquewhite;
     padding: 90px;
-    border-bottom: solid;
-    border-top: solid;
 }
 
 #container1 p {
@@ -222,9 +227,7 @@ footer figure img {
 }
 
 footer {
-  border-top: solid black;
-  background-color: #DC7846;
-  color: black;
+  background-color: #CD4662;
   display: grid;
   grid-template-columns: 9fr 0.5fr 0.5fr 0.5fr;
   align-items: center;
@@ -233,6 +236,12 @@ footer {
 
 footer p {
   margin-left: 20px;
+  opacity: 0.5;
+}
+
+footer p:hover {
+  transition: 0.5s;
+  opacity: 1;
 }
 
 .material-symbols-outlined{
@@ -253,7 +262,7 @@ footer p {
         right: 20px;
         top: 43px;
         font-size: 40px;
-  }  
+  } 
   
   h1 {
     font-size: 90%;
@@ -343,6 +352,18 @@ variable
 
 .big-shoulders-display-<uniquifier> {
   font-family: "Big Shoulders Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+variable
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+
+.lora-<uniquifier> {
+  font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
