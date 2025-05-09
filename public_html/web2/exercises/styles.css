@@ -1,0 +1,251 @@
+
+header{
+  width: 100vw;
+  overflow: hidden;
+}
+header svg{
+  width: 200vw;
+}
+
+
+#XMLID_00000124852462299040425300000016724265766057857448_{
+  animation: wavemaker 48s ease-in-out infinite alternate;
+}
+
+#XMLID_00000062176338550799627460000010230782912647928207_{
+  animation: wavemaker 30s ease-in-out infinite alternate;
+}
+
+#XMLID_00000038383782398121288080000006800597718886860697_{
+  animation: wavemaker 18s ease-in-out infinite alternate-reverse;
+}
+
+#XMLID_00000031897661645785587080000011779888109744730519_{
+  animation: wavemaker 12s ease-in-out infinite alternate;
+}
+
+@keyframes wavemaker {
+  0% {
+    transform: translateX(-4vw);
+  }
+
+  100%{
+    transform: translateX(-30vw);
+  }
+}
+
+.slider {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.slider-track {
+    display: flex;
+    width: calc(200px * 16);
+    animation: scroll 20s linear infinite;
+}
+
+.slider-image {
+    max-width: 200px;
+    flex-shrink: 0;
+    margin: 10px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 8));
+    }
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.44rem;
+    padding: 1.44rem 0.833rem;
+  }
+  #cards figure{
+    position: relative;
+  }
+
+  #cards a{
+    border: solid 1px rgb(240 240 240 / 0.25);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  #cards img {
+    width: 100%;
+    aspect-ratio: 16/6;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+  }
+
+  #cards section{
+    padding: 0.833rem;
+  }
+
+  #cards h3 {
+    font-size: clamp(0.833rem, 1.6vw + 0.579rem, 1.728rem);
+    opacity: 0.5;
+    transition: opacity 0.5s;
+  }
+
+  #cards p{
+    opacity: 0;
+    transition: 1.0s;
+  }
+
+  #cards .over{
+    position: relative;
+    top: 1.44rem;
+    opacity: 0;
+    transition: 0.25s;
+  }
+
+  #cards a:hover {
+    transition: color 1s;
+  }
+
+  #cards a:hover h3, #cards a:hover p{
+    opacity: 1;
+  }
+
+  #cards section{
+    transform: translateY(1.728rem);
+    transition: transform 0.25s;
+  }
+
+  #cards a:hover section{
+    transform: translateY(0);
+  }
+
+  #cards a:hover .over{
+    top:0;
+    opacity: 1;
+  }
+
+  #grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+}
+
+.overlay {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.item {
+    object-fit: contain;
+    margin: 1%;
+    max-width: 45%;
+    border: solid 3px #55414A;
+    border-radius: 15px;
+}
+
+.assets {
+    padding: 5%;
+}
+
+.grid-item .overlay {
+    /* transform: translateY(20px); */
+    opacity: 0.3;
+}
+
+.grid-item:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.25s ease-out;
+}
+
+#kirby-section {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+img {
+    max-width: 400px;
+    max-height: 400px;
+}
+.scale:hover{
+    transform: scale(2);
+}
+
+.rotate:hover{
+    transform: rotate(45deg)
+}
+
+.translate:hover{
+    transform: translateX(400px)
+}
+
+.scale{
+    transition: 2s;
+}
+.rotate{
+    transition: 2s;
+}
+.translate{
+    transition: 2s;
+}
+
+#cube-section {
+  padding: 200px;
+  padding-bottom: 400px;
+}
+
+.box{
+  position: relative;
+  perspective: 700px;
+  user-select: none;
+}
+
+.box article{
+  transform-style: preserve-3d;
+  /* move the whole box down, then 3d-transform the center back up */
+  transform: rotateX(0deg) ;
+  transition: transform 0.3s;
+  transform-origin: center ;
+}
+
+.front, .back{
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  backface-visibility: visible;
+  user-select: none;
+}
+
+.front{
+  position: absolute;
+  transform: rotateX(0deg) translate3d(0px, -100px, 100px);
+}
+
+.back{
+  position: absolute;
+  transform: rotateX(-90deg) translate3d(0px, 0px, 0px);
+}
+
+.box:hover article{
+  transform: rotateX(90deg);
+}
+
+@media only screen and (min-width: 650px) and (orientation: landscape) {
+    
+    #grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #cards {
+        grid-template-columns: 1fr 1fr;
+      }
+}

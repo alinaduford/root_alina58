@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'PPAgrandir';
+    src: url('/fonts/sportinggrotesque/fonts/SportingGrotesque-Regular.otf') format('opentype');
+  }
+  
+@font-face {
+    font-family: 'sportinggrotesque';
+    src: url('/public_html/fonts/PPAgrandir/PPAgrandir-Regular.otf') format('truetype');
+  }
+
+html {
+    font-family: 'sportinggrotesque';
+}
+
+body {
+    font-family: 'sportinggrotesque';
+}
